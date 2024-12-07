@@ -7,7 +7,8 @@ import Redux from "./assets/techstack/redux.svg";
 import StyledComponents from "./assets/techstack/styled-components.svg";
 import Pug from "./assets/techstack/pug.svg";
 import Git from "./assets/techstack/git.svg";
-// import Typescript from "./assets/techstack/typescript.svg";
+import Typescript from "./assets/techstack/typescript.svg";
+import NextJS from "./assets/techstack/nextjs.svg";
 // import Bootstrap from "./assets/techstack/bootstrap.svg";
 import NodeJS from "./assets/techstack/nodejs.svg";
 import Express from "./assets/techstack/express.png";
@@ -68,7 +69,7 @@ const Techstack = () => {
             </TooltipProvider>
 
             {/* Typescript Tooltip */}
-            {/* <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+            <TooltipProvider delayDuration={90} skipDelayDuration={60}>
               <Tooltip>
                 <TooltipTrigger>
                   <img
@@ -83,7 +84,7 @@ const Techstack = () => {
                   <p>Typescript</p>
                 </TooltipContent>
               </Tooltip>
-            </TooltipProvider> */}
+            </TooltipProvider>
 
             {/* Tailwind Tooltip */}
             <TooltipProvider delayDuration={90} skipDelayDuration={60}>
@@ -219,6 +220,18 @@ const Techstack = () => {
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Express.js</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            {/* NextJS Tooltip */}
+            <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <img src={NextJS} alt='nextjs-icon' width={38} height={38} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>NextJS</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
