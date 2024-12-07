@@ -14,7 +14,6 @@ import Pug from "./assets/techstack/pug.svg";
 import MongoDB from "./assets/techstack/mongodb.png";
 import React from "./assets/techstack/react.svg";
 import NextJS from "./assets/techstack/nextjs.svg";
-import ShadcnUI from "./assets/techstack/shadcn-ui.svg";
 import Clerk from "./assets/techstack/clerk.png";
 import ReactLeaflet from "./assets/leaflet.svg";
 import ReactRouter from "./assets/techstack/react-router.svg";
@@ -284,18 +283,6 @@ const Projects = () => {
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>NextJS</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-
-              {/* ShadCN UI Tooltip */}
-              <TooltipProvider delayDuration={90} skipDelayDuration={60}>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <img src={ShadcnUI} alt='nextjs-icon' className='w-[24px] mt-[3px]' />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Shadcn UI</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
