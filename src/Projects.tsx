@@ -337,7 +337,7 @@ const Projects = () => {
               </a>
 
               {/* live preview */}
-              <a href='https://next-chat-one-liart.vercel.app' className='text-xs w-full'>
+              <a href='https://next-chat-teal-nine.vercel.app' className='text-xs w-full'>
                 <button className='text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 mb-2 flex gap-1 items-center justify-center w-full'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
