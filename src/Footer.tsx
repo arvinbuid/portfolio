@@ -1,7 +1,9 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className='text-center text-sm text-muted-foreground p-10 mt-10'>
-      Copyright@ 2024 Arvin Buid. All rights reserved.
+      <p>&copy; {currentYear} Arvin Buid. All rights reserved.</p>
     </div>
   );
 };
