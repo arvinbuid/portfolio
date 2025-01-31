@@ -1,8 +1,8 @@
-import jobrover from "./assets/jobrover.png";
 import theWildOasis from "./assets/the-wild-oasis.png";
 import natours from "./assets/natours.png";
 import nextchat from "./assets/next-chat.png";
 import dapperfit from "./assets/dapper-fit.png";
+import workhive from "./assets/workhive.png";
 
 import HTML from "./assets/techstack/html5.png";
 import CSS3 from "./assets/techstack/css3.png";
@@ -18,8 +18,8 @@ import Clerk from "./assets/techstack/clerk.png";
 import Shadcn from "./assets/techstack/shadcn-ui.png";
 import ReactRouter from "./assets/techstack/react-router.svg";
 import ReactQuery from "./assets/techstack/react-query.svg";
-import PHP from "./assets/techstack/php.svg";
-import MySQL from "./assets/techstack/mysql.svg";
+import Alpinejs from "./assets/techstack/alpinejs.svg";
+import Laravel from "./assets/techstack/laravel.svg";
 import Convex from "./assets/techstack/convex.png";
 import StyledComponents from "./assets/techstack/styled-components.svg";
 import Supabase from "./assets/techstack/supabase-icon.svg";
@@ -695,26 +695,25 @@ const Projects = () => {
           </div>
         </aside>
 
-        {/* jobrover */}
+        {/* workhive */}
         <aside className='flex flex-col border rounded overflow-hidden h-auto w-full shadow m-auto max-w-[300px]'>
           <div className='relative h-[180px] overflow-hidden flex justify-center'>
             <img
-              src={jobrover}
+              src={workhive}
               alt='e-commerce'
               className='ease-in-out duration-100 w-full hover:scale-105 object-contain object-center'
             />
           </div>
           <div className='flex flex-col ml-4 pt-2 items-start'>
             <div>
-              <h5 className='text-lg font-semibold text-start'>Jobrover</h5>
+              <h5 className='text-lg font-semibold text-start'>Workhive</h5>
               <p className='flex items-center gap-1 text-blue-500 text-xs'>PERSONAL PROJECT</p>
             </div>
           </div>
           <div className='flex flex-col px-2 gap-3 h-auto'>
             <p className='text-sm text-start text-muted-foreground ml-1.5 mt-2'>
               Job listing application to search and apply jobs online. Employers can also register
-              an account to post a job listing in the system. It was made using vanilla PHP and
-              composer for autoloading.
+              an account to post a job listing in the syste and job seekers can apply for jobs.
             </p>
 
             {/* techstack icons */}
@@ -723,7 +722,7 @@ const Projects = () => {
               <TooltipProvider delayDuration={90} skipDelayDuration={60}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <img src={HTML} alt='html5-icon' className='w-[20px]' />
+                    <img src={HTML} alt='html5-icon' className='w-[22px]' />
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>HTML5</p>
@@ -735,7 +734,7 @@ const Projects = () => {
               <TooltipProvider delayDuration={90} skipDelayDuration={60}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <img src={CSS3} alt='css3-icon' className='w-[20px]' />
+                    <img src={CSS3} alt='css3-icon' className='w-[22px]' />
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>CSS3</p>
@@ -743,26 +742,50 @@ const Projects = () => {
                 </Tooltip>
               </TooltipProvider>
 
-              {/* PHP Tooltip */}
+              {/* Javascript Tooltip */}
               <TooltipProvider delayDuration={90} skipDelayDuration={60}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <img src={PHP} alt='php-icon' className='w-[38px] rounded-sm mt-[3px]' />
+                    <img src={JS} alt='css3-icon' className='w-[24px] rounded-sm' />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>PHP</p>
+                    <p>Javascript</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
 
-              {/* MySQL Tooltip */}
+              {/* Laravel Tooltip */}
               <TooltipProvider delayDuration={90} skipDelayDuration={60}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <img src={MySQL} alt='mysql-icon' className='w-[35px] rounded-sm mt-[3px]' />
+                    <img src={Laravel} alt='php-icon' className='w-[26px]' />
                   </TooltipTrigger>
                   <TooltipContent>
-                    <p>MySQL</p>
+                    <p>Laravel</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              {/* PostgreSQL Tooltip */}
+              <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <img src={Postgres} alt='mysql-icon' className='w-[26px] rounded-sm' />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Postgres</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              {/* Alpinejs Tooltip */}
+              <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <img src={Alpinejs} alt='mysql-icon' className='w-[26px] rounded-sm' />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Alpine.js</p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
@@ -771,7 +794,7 @@ const Projects = () => {
             {/* source code & live preview */}
             <div className='flex flex-col mb-1'>
               {/* github source code button*/}
-              <a href='https://github.com/arvinbuid/jobrover' className='text-xs w-full'>
+              <a href='https://github.com/arvinbuid/workhive' className='text-xs w-full'>
                 <button className='text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 mb-2 flex gap-1 items-center justify-center w-full'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -793,8 +816,11 @@ const Projects = () => {
               </a>
 
               {/* live preview */}
-              <a href='https://jobrover.tech' className='text-xs w-full'>
-                <button className='text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 mb-2 flex gap-1 items-center justify-center w-full'>
+              <a href='#' className='text-xs w-full pointer-events-none'>
+                <button
+                  className='text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 mb-2 flex gap-1 items-center justify-center w-full'
+                  disabled={true}
+                >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'

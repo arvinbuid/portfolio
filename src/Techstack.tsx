@@ -9,10 +9,11 @@ import Pug from "./assets/techstack/pug.svg";
 import Git from "./assets/techstack/git.svg";
 import Typescript from "./assets/techstack/typescript.svg";
 import NextJS from "./assets/techstack/nextjs.svg";
-// import Bootstrap from "./assets/techstack/bootstrap.svg";
 import NodeJS from "./assets/techstack/nodejs.svg";
 import Express from "./assets/techstack/express.png";
 import PHP from "./assets/techstack/php.svg";
+import Laravel from "./assets/techstack/laravel.svg";
+import Postgres from "./assets/techstack/postgresql.svg";
 import MySQL from "./assets/techstack/mysql.svg";
 import MongoDB from "./assets/techstack/mongodb.png";
 import Supabase from "./assets/techstack/supabase-icon.svg";
@@ -103,18 +104,6 @@ const Techstack = () => {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
-
-            {/* Boostrap Tooltip */}
-            {/* <TooltipProvider delayDuration={90} skipDelayDuration={60}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <img src={Bootstrap} className='mt-2' alt='bootstrap' width={40} height={40} />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Bootstrap</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider> */}
 
             {/* ReactJS Tooltip */}
             <TooltipProvider delayDuration={90} skipDelayDuration={60}>
@@ -244,6 +233,30 @@ const Techstack = () => {
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>PHP</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            {/* PostgreSQL Tooltip */}
+            <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <img src={Postgres} alt='mysql-icon' width={36} height={36} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>PostgreSQL</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            {/* Laravel Tooltip */}
+            <TooltipProvider delayDuration={90} skipDelayDuration={60}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <img src={Laravel} alt='mysql-icon' width={34} height={34} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Laravel</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
