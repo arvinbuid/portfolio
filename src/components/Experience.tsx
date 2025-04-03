@@ -18,7 +18,7 @@ function Experience() {
   const scrollYSpring = useSpring(scrollYProgress, {stiffness: 100, damping: 30});
 
   return (
-    <div className='relative py-20 px-20 lg:px-82'>
+    <div className='relative py-20 px-20 lg:px-96'>
       <Heading text='Experience & Education' />
       <Image
         src='/education.png'
