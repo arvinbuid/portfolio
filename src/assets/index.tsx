@@ -79,3 +79,51 @@ export const skillsData = [
     icon: "/skills/mongodb.png",
   },
 ];
+
+export const projectsData = [
+  {
+    name: 'The Wild Oasis',
+    desc: 'An internal web application where the employees of the fictional Wild Oasis company can manage bookings, check-ins & check-outs of a guests, cabins and many more..',
+    url: '/projects/the-wild-oasis.png',
+    tech: ['HTML', 'CSS', 'ReactJS'],
+  },
+  {
+    name: 'Dapper Fit',
+    desc: 'A modern Ecommerce platform built with Next.js, Typescript, Prisma and ShadCN where a user can order and pay clothes online. A user can sign up/login and admin can manage order and products.',
+    url: '/projects/dapper-fit.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS'],
+  },
+  {
+    name: 'Synapse',
+    desc: 'Fullstack social media web application made with NextJS 15 & modern web technologies. Users can post, comment like, received real time notifications and follow other users. Responsive to all devices with toggle dark mode functionality.',
+    url: '/projects/synapse.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS'],
+  },
+  {
+    name: 'HirePulse',
+    desc: 'A fullstack MERN application for managing and tracking job applications. Users can do CRUD operations & admin can manage users job application. Responsive to all devices with light/dark functionality.',
+    url: '/projects/hirepulse.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'NodeJS', 'MongoDB'],
+  },
+  {
+    name: 'Workhive',
+    desc: 'Job listing application to search and apply jobs online. Employers can also register an account to post a job listing in the syste and job seekers can apply for jobs.',
+    url: '/projects/workhive.jpg',
+    tech: ['HTML', 'CSS', 'PHP', 'Laravel'],
+  },
+]
+
+export const projectsButton = [
+  'All',
+  'HTML',
+  'CSS',
+  'Typescript',
+  'ReactJS',
+  'NextJS',
+  'Node.js',
+  'PHP',
+  'Laravel',
+  'PostgreSQL',
+  'MySQL',
+  'MongoDB'
+]
