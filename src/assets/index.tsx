@@ -108,7 +108,7 @@ export const projectsData = [
   {
     name: 'Workhive',
     desc: 'Job listing application to search and apply jobs online. Employers can also register an account to post a job listing in the syste and job seekers can apply for jobs.',
-    url: '/projects/workhive.jpg',
+    url: '/projects/workhive.png',
     tech: ['HTML', 'CSS', 'PHP', 'Laravel'],
   },
 ]
@@ -120,7 +120,7 @@ export const projectsButton = [
   'Typescript',
   'ReactJS',
   'NextJS',
-  'Node.js',
+  'NodeJS',
   'PHP',
   'Laravel',
   'PostgreSQL',
