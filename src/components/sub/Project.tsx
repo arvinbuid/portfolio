@@ -23,7 +23,7 @@ function Project({ data, index }: ProjectProps) {
             viewport={{ once: true }}
             transition={{}}
             className="relative w-full lg:w-[400px] h-max border border-yellow-400 rounded-lg cursor-pointer">
-            <Image src={data.url} alt="Synapse" width={500} height={500} className="rounded-lg opacity-70" />
+            <Image src={data.url} alt="Synapse" width={500} height={500} className="rounded-lg opacity-90" />
             <motion.div onClick={() => setShow(!show)}
                 initial={{ opacity: 0 }} animate={{ opacity: show ? 1 : 0 }} transition={{ duration: 0.3 }}
                 className="absolute top-0 bg-white/95 w-full h-full p-6 gap-y-2 flex flex-col justify-center items-center rounded-lg ">

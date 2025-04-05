@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Heading from "./sub/Heading";
-import {aboutText, downloadIcon} from "@/assets";
-import {arrowLeftIcon} from "@/assets";
+import { aboutText, downloadIcon } from "@/assets";
+import { arrowLeftIcon } from "@/assets";
 
 function About() {
   return (
-    <div className='min-h-screen px-16 xl:px-96 flex flex-col items-center'>
+    <div id='about' className='min-h-screen px-16 xl:px-96 flex flex-col items-center'>
       <Heading text='About Me' />
       <div className='w-full flex items-center justify-center sm:justify-between'>
         <Image

@@ -22,7 +22,7 @@ function Skills() {
   };
 
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center gap-y-20 py-20 px-20 lg:px-96'>
+    <div id="skills" className='min-h-screen flex flex-col justify-center items-center gap-y-20 py-20 px-20 lg:px-96'>
       <Heading text='Skills' />
       <div className='w-full flex justify-between flex-wrap gap-x-8 gap-y-6 lg:gap-y-10'>
         {skillsData.map((skill, index) => (
@@ -43,7 +43,7 @@ function Skills() {
               alt='Skills Image'
               className='h-auto w-[40px]'
             />
-            <p className='text-sm text-gray-600'>{skill.name}</p>
+            <p className='text-sm text-gray-600 select-none'>{skill.name}</p>
           </motion.div>
         ))}
       </div>

@@ -1,38 +1,39 @@
 "use client";
 
 import Image from "next/image";
-import {heroIcons} from "@/assets";
-import {useMotionValue, useTransform, motion, useSpring} from "framer-motion";
-import {useState} from "react";
+import { heroIcons } from "@/assets";
+import { useMotionValue, useTransform, motion, useSpring } from "framer-motion";
+import { useState } from "react";
 
 function Hero() {
-  const [windowOffset, setWindowOffset] = useState({innerWidth: 0, innerHeight: 0});
+  const [windowOffset, setWindowOffset] = useState({ innerWidth: 0, innerHeight: 0 });
   const [mouseMove, setMouseMove] = useState(false);
   const [buttonHover, setButtonHover] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const {clientX, clientY} = e;
+    const { clientX, clientY } = e;
     x.set(clientX);
     y.set(clientY);
   };
 
   const handleMouseEnter = () => {
-    setWindowOffset({innerWidth: window.innerWidth, innerHeight: window.innerHeight});
+    setWindowOffset({ innerWidth: window.innerWidth, innerHeight: window.innerHeight });
     setMouseMove(true);
   };
 
-  const {innerWidth, innerHeight} = windowOffset;
+  const { innerWidth, innerHeight } = windowOffset;
 
-  const xSpring = useSpring(x, {stiffness: 100, damping: 10});
-  const ySpring = useSpring(y, {stiffness: 100, damping: 10});
+  const xSpring = useSpring(x, { stiffness: 100, damping: 10 });
+  const ySpring = useSpring(y, { stiffness: 100, damping: 10 });
 
   const rotateY = useTransform(xSpring, [0, innerWidth], [-30, 30]);
   const rotateX = useTransform(ySpring, [0, innerHeight], [10, -20]);
 
   return (
     <div
+      id="home"
       className='h-screen grid place-items-center'
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -41,7 +42,7 @@ function Hero() {
         <div className='flex flex-col items-center justify-center gap-y-3 font-light capitalize'>
           <motion.div
             className='flex justify-center items-center'
-            style={{rotateX: mouseMove ? rotateX : 0, rotateY: mouseMove ? rotateY : 0}}
+            style={{ rotateX: mouseMove ? rotateX : 0, rotateY: mouseMove ? rotateY : 0 }}
           >
             <Image
               src='/person.png'
@@ -53,13 +54,13 @@ function Hero() {
             />
             <motion.span
               className='absolute text-3xl font-semibold text-white'
-              initial={{scale: 0}}
+              initial={{ scale: 0 }}
               animate={{
                 opacity: buttonHover ? 0 : 1,
                 scale: buttonHover ? 2 : 0,
                 y: buttonHover ? -40 : 1,
               }}
-              transition={{opacity: {delay: 0.4}}}
+              transition={{ opacity: { delay: 0.4 } }}
             >
               Hi
             </motion.span>
@@ -67,7 +68,7 @@ function Hero() {
           <h1 className='mt-52 text-center absolute text-2xl sm:text-3xl tracking-wider font-bold text-gray-500 '>
             My name is Arvin Buid &
           </h1>
-          <p className='text-lg tracking-wider text-gray-700 mt-10'>I am a Web Developer</p>
+          <p className='text-lg tracking-wider text-gray-700 mt-10'>{`I'm a Web Developer`}</p>
         </div>
         <div className='mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600'>
           {heroIcons.map((icon) => (

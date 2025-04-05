@@ -34,7 +34,7 @@ function Projects() {
     }, [index, handleClick])
 
     return (
-        <div className="min-h-screen px-16 xl:px-96 py-20">
+        <div id='projects' className="min-h-screen px-16 xl:px-96 py-20">
             <Heading text="Projects" />
             <div className="flex flex-wrap items-center justify-between gap-4 py-10">
                 {/* Project Buttons */}

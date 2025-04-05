@@ -1,4 +1,4 @@
-import { RiFacebookCircleLine, RiGithubLine } from "@remixicon/react";
+import { RiBriefcaseLine, RiCopyrightLine, RiFacebookCircleLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiProjectorLine, RiUserLine } from "@remixicon/react";
 
 export const heroIcons = [
   <RiFacebookCircleLine key='facebook-icon' />,
@@ -126,4 +126,35 @@ export const projectsButton = [
   'PostgreSQL',
   'MySQL',
   'MongoDB'
+]
+
+export const copyRightIcon = <RiCopyrightLine />
+
+
+export const navbarData = [
+  {
+    id: 'home',
+    name: 'Home',
+    icon: <RiHome5Line />,
+  },
+  {
+    id: 'about',
+    name: 'About',
+    icon: <RiUserLine />,
+  },
+  {
+    id: 'experience',
+    name: 'MyRoad',
+    icon: <RiHistoryLine />,
+  },
+  {
+    id: 'skills',
+    name: 'Skills',
+    icon: <RiBriefcaseLine />,
+  },
+  {
+    id: 'projects',
+    name: 'Projects',
+    icon: <RiProjectorLine />,
+  },
 ]
