@@ -5,7 +5,7 @@ import { arrowLeftIcon } from "@/assets";
 
 function About() {
   return (
-    <div id='about' className='min-h-screen px-16 xl:px-96 flex flex-col items-center'>
+    <div id='about' className='min-h-screen flex flex-col items-center'>
       <Heading text='About Me' />
       <div className='w-full flex items-center justify-center sm:justify-between'>
         <Image
@@ -15,11 +15,11 @@ function About() {
           height={300}
           className='hidden md:flex md:w-[200px]'
         />
-        <div className='relative max-w-[800px] bg-zinc-100 p-5 text-justify rounded-lg'>
+        <div className='relative max-w-[800px] bg-zinc-100 p-5 text-justify rounded-lg dark:bg-zinc-700'>
           <span className='absolute -left-5 top-17 scale-[2.5] text-zinc-100 hidden md:block'>
             {arrowLeftIcon}
           </span>
-          <p className='text-lg lg:text-xl font-light text-gray-700 first-letter:pl-3'>
+          <p className='text-lg lg:text-xl font-light text-gray-700 first-letter:pl-3 dark:text-gray-300'>
             {aboutText}
           </p>
           <a

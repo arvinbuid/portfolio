@@ -6,7 +6,10 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import ToggleTheme from "@/components/sub/ToggleTheme";
+
 import { useEffect, useRef, useState } from "react";
+
 
 export default function Home() {
   const [id, setId] = useState('0')
@@ -43,14 +46,16 @@ export default function Home() {
 
   return (
     <>
-      <Navbar id={id} />
-      <div ref={componentsRef}>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-      </div>
+      <ToggleTheme>
+        <Navbar id={id} />
+        <div ref={componentsRef}>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+        </div>
+      </ToggleTheme>
     </>
   );
 }

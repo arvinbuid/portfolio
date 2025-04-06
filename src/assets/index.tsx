@@ -1,7 +1,6 @@
-import { RiBriefcaseLine, RiCopyrightLine, RiFacebookCircleLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiProjectorLine, RiUserLine } from "@remixicon/react";
+import { RiBriefcaseLine, RiCopyrightLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiMoonFoggyFill, RiProjectorLine, RiSunFoggyFill, RiUserLine } from "@remixicon/react";
 
 export const heroIcons = [
-  <RiFacebookCircleLine key='facebook-icon' />,
   <RiGithubLine key='github-icon' />,
 ];
 
@@ -158,3 +157,6 @@ export const navbarData = [
     icon: <RiProjectorLine />,
   },
 ]
+
+export const sunIcon = <RiSunFoggyFill />
+export const moonIcon = <RiMoonFoggyFill />

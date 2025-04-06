@@ -65,15 +65,15 @@ function Hero() {
               Hi
             </motion.span>
           </motion.div>
-          <h1 className='mt-52 text-center absolute text-2xl sm:text-3xl tracking-wider font-bold text-gray-500 '>
+          <h1 className='mt-52 text-center absolute text-2xl sm:text-3xl tracking-wider font-bold text-gray-500 dark:text-gray-200 transition-colors'>
             My name is Arvin Buid &
           </h1>
-          <p className='text-lg tracking-wider text-gray-700 mt-10'>{`I'm a Web Developer`}</p>
+          <p className='text-lg tracking-wider text-gray-700 mt-10 dark:text-gray-400 transition-colors'>{`I'm a Web Developer`}</p>
         </div>
         <div className='mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600'>
           {heroIcons.map((icon) => (
             <a
-              href='#'
+              href='https://github.com/arvinbuid'
               key={icon.key}
               className='hover:bg-red-400 hover:text-white rounded-lg transition-colors'
             >
