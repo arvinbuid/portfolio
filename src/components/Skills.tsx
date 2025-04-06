@@ -23,7 +23,7 @@ function Skills() {
 
   return (
     <div id="skills" className='min-h-screen flex flex-col justify-center items-center gap-y-20 py-20'>
-      <Heading text='Skills' />
+      <Heading text='Tech Stacks' />
       <div className='w-full flex justify-items-start flex-wrap gap-x-4 gap-y-4 lg:gap-y-10'>
         {skillsData.map((skill, index) => (
           <motion.div

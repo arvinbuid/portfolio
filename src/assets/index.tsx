@@ -1,4 +1,4 @@
-import { RiBriefcaseLine, RiCopyrightLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiMoonFoggyFill, RiProjectorLine, RiSunFoggyFill, RiUserLine } from "@remixicon/react";
+import { RiBriefcaseLine, RiBroadcastLine, RiCopyrightLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiMoonFoggyFill, RiProjectorLine, RiSunFoggyFill, RiUserLine } from "@remixicon/react";
 
 export const heroIcons = [
   <RiGithubLine key='github-icon' />,
@@ -40,6 +40,10 @@ export const skillsData = [
   {
     name: "CSS",
     icon: "/skills/css.png",
+  },
+  {
+    name: "JS",
+    icon: "/skills/js.png",
   },
   {
     name: "TypeScript",
@@ -84,31 +88,41 @@ export const projectsData = [
     name: 'The Wild Oasis',
     desc: 'An internal web application where the employees of the fictional Wild Oasis company can manage bookings, check-ins & check-outs of a guests, cabins and many more..',
     url: '/projects/the-wild-oasis.png',
-    tech: ['HTML', 'CSS', 'ReactJS'],
+    tech: ['HTML', 'CSS', 'Javascript', 'ReactJS'],
+    githubLink: 'https://github.com/arvinbuid/the-wild-oasis',
+    livePreview: "https://the-wild-oasis-personal-me.netlify.app/login"
   },
   {
     name: 'Dapper Fit',
     desc: 'A modern Ecommerce platform built with Next.js, Typescript, Prisma and ShadCN where a user can order and pay clothes online. A user can sign up/login and admin can manage order and products.',
     url: '/projects/dapper-fit.png',
-    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS'],
+    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS', 'PostgreSQL'],
+    githubLink: 'https://github.com/arvinbuid/dapper-fit',
+    livePreview: "https://dapper-fit-main.vercel.app/"
   },
   {
     name: 'Synapse',
     desc: 'Fullstack social media web application made with NextJS 15 & modern web technologies. Users can post, comment like, received real time notifications and follow other users. Responsive to all devices with toggle dark mode functionality.',
     url: '/projects/synapse.png',
-    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS'],
+    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS', 'PostgreSQL'],
+    githubLink: 'https://github.com/arvinbuid/synapse',
+    livePreview: "https://synapse-six-sand.vercel.app/"
   },
   {
     name: 'HirePulse',
     desc: 'A fullstack MERN application for managing and tracking job applications. Users can do CRUD operations & admin can manage users job application. Responsive to all devices with light/dark functionality.',
     url: '/projects/hirepulse.png',
     tech: ['HTML', 'CSS', 'Typescript', 'NodeJS', 'MongoDB'],
+    githubLink: 'https://github.com/arvinbuid/hirepulse',
+    livePreview: "https://hirepulse.onrender.com"
   },
   {
     name: 'Workhive',
     desc: 'Job listing application to search and apply jobs online. Employers can also register an account to post a job listing in the syste and job seekers can apply for jobs.',
     url: '/projects/workhive.png',
-    tech: ['HTML', 'CSS', 'PHP', 'Laravel'],
+    tech: ['HTML', 'CSS', 'PHP', 'Laravel', 'MySQL'],
+    githubLink: 'https://github.com/arvinbuid/workhive',
+    livePreview: "#"
   },
 ]
 
@@ -116,6 +130,7 @@ export const projectsButton = [
   'All',
   'HTML',
   'CSS',
+  'Javascript',
   'Typescript',
   'ReactJS',
   'NextJS',
@@ -125,6 +140,11 @@ export const projectsButton = [
   'PostgreSQL',
   'MySQL',
   'MongoDB'
+]
+
+export const projectIcons = [
+  <RiGithubLine key='github-icon' />,
+  <RiBroadcastLine key='live-icon' />
 ]
 
 export const copyRightIcon = <RiCopyrightLine />
