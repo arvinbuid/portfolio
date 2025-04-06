@@ -15,11 +15,11 @@ function About() {
           height={300}
           className='hidden md:flex md:w-[200px]'
         />
-        <div className='relative max-w-[800px] bg-zinc-100 p-5 text-justify rounded-lg dark:bg-zinc-700'>
+        <div className='relative max-w-[800px] bg-zinc-100 p-5 lg:text-justify rounded-lg dark:bg-zinc-700'>
           <span className='absolute -left-5 top-17 scale-[2.5] text-zinc-100 hidden md:block'>
             {arrowLeftIcon}
           </span>
-          <p className='text-lg lg:text-xl font-light text-gray-700 first-letter:pl-3 dark:text-gray-300'>
+          <p className='text-md lg:text-xl font-light text-gray-700 first-letter:pl-3 dark:text-gray-300'>
             {aboutText}
           </p>
           <a

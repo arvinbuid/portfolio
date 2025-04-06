@@ -24,7 +24,7 @@ function Skills() {
   return (
     <div id="skills" className='min-h-screen flex flex-col justify-center items-center gap-y-20 py-20'>
       <Heading text='Skills' />
-      <div className='w-full flex justify-between flex-wrap gap-x-8 gap-y-6 lg:gap-y-10'>
+      <div className='w-full flex justify-items-start flex-wrap gap-x-4 gap-y-4 lg:gap-y-10'>
         {skillsData.map((skill, index) => (
           <motion.div
             custom={index}

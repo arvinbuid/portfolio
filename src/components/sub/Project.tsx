@@ -26,9 +26,9 @@ function Project({ data, index }: ProjectProps) {
             <Image src={data.url} alt="Synapse" width={500} height={500} className="rounded-lg opacity-90" />
             <motion.div onClick={() => setShow(!show)}
                 initial={{ opacity: 0 }} animate={{ opacity: show ? 1 : 0 }} transition={{ duration: 0.3 }}
-                className="absolute top-0 bg-white/95 dark:bg-zinc-700 w-full h-full p-6 gap-y-2 flex flex-col justify-center items-center rounded-lg ">
+                className="absolute top-0 bg-white/95 dark:bg-zinc-700 w-full h-full p-2 lg:p-6 gap-y-2 flex flex-col justify-center items-center rounded-lg ">
                 <h2 className="text-lg font-bold tracking-wide text-gray-500 dark:text-gray-300">{data.name}</h2>
-                <p className="text-justify text-gray-500 dark:text-gray-400 first-letter:pl-4">{data.desc}</p>
+                <p className="text-sm text-justify text-gray-500 dark:text-gray-400 first-letter:pl-4">{data.desc}</p>
             </motion.div>
         </motion.div>
     )

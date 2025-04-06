@@ -44,7 +44,7 @@ function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, type: "spring", stiffness: 60 }}
-              className='relative flex flex-col gap-y-3 border border-red-300 bg-white p-4 rounded-md tracking-wide dark:bg-zinc-700'
+              className='relative flex flex-col gap-y-3 border border-red-300 bg-white p-4 rounded-md tracking-wide dark:bg-zinc-700 z-30'
             >
               <h1 className='text-gray-700 text-lg lg:text-xl dark:text-gray-200'>{data.title}</h1>
               <p className='text-gray-800'>
