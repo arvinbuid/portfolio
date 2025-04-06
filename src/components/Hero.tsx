@@ -39,7 +39,9 @@ function Hero() {
       onMouseEnter={handleMouseEnter}
     >
       <div>
-        <div className='flex flex-col items-center justify-center gap-y-3 font-light capitalize'>
+        <motion.div
+          initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
+          className='flex flex-col items-center justify-center gap-y-3 font-light capitalize'>
           <motion.div
             className='flex justify-center items-center'
             style={{ rotateX: mouseMove ? rotateX : 0, rotateY: mouseMove ? rotateY : 0 }}
@@ -65,12 +67,16 @@ function Hero() {
               Hi
             </motion.span>
           </motion.div>
-          <h1 className='mt-52 text-center absolute text-2xl sm:text-3xl tracking-wider font-bold text-gray-500 dark:text-gray-200 transition-colors'>
+          <h1 className='mt-50 text-center absolute text-2xl sm:text-3xl tracking-wider font-bold text-gray-500 dark:text-gray-200 transition-colors whitespace-nowrap'>
             My name is Arvin Buid &
           </h1>
           <p className='text-lg tracking-wider text-gray-700 mt-10 dark:text-gray-400 transition-colors'>{`I'm a Web Developer`}</p>
-        </div>
-        <div className='mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className='mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600'>
           {heroIcons.map((icon) => (
             <a
               href='https://github.com/arvinbuid'
@@ -80,15 +86,18 @@ function Hero() {
               {icon}
             </a>
           ))}
-        </div>
-        <a
+        </motion.div>
+        <motion.a
           href='#'
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7 }}
           className='mx-auto mt-7 text-center block text-white w-max bg-red-400 rounded-lg px-3 py-1 font-light capitalize hover:bg-red-500 transition-colors'
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
         >
           Talk to me
-        </a>
+        </motion.a>
       </div>
     </div>
   );
