@@ -34,7 +34,7 @@ function Skills() {
             initial='hidden'
             whileInView='visible'
             key={index}
-            className='flex justify-center items-center px-4 lg:px-5 py-2 gap-x-4 gap-y-8 lg:gap-y-6 border border-yellow-500 rounded-xl bg-zinc-100 dark:bg-zinc-700'
+            className='flex justify-center items-center px-2 sm:px-4 lg:px-5 py-2 gap-x-4 gap-y-8 lg:gap-y-6 border border-yellow-500 rounded-xl bg-zinc-100 dark:bg-zinc-700'
           >
             <Image
               src={skill.icon}
@@ -43,7 +43,7 @@ function Skills() {
               alt='Skills Image'
               className='h-auto w-[40px]'
             />
-            <p className='text-sm text-gray-600 select-none dark:text-gray-300'>{skill.name}</p>
+            <p className='text-xs sm:text-sm text-gray-600 select-none dark:text-gray-300'>{skill.name}</p>
           </motion.div>
         ))}
       </div>

@@ -36,7 +36,7 @@ function Projects() {
     return (
         <div id='projects' className="min-h-screen py-20">
             <Heading text="Projects" />
-            <div className="flex flex-wrap items-center justify-between gap-4 py-10">
+            <div className="flex flex-wrap items-center gap-4 py-10">
                 {/* Project Buttons */}
                 {projectsButton.map((text, index) => (
                     <motion.button
@@ -50,7 +50,7 @@ function Projects() {
                             scale: index === 0 ? 1.2 : 1
                         }}
                         ref={(el) => { buttonsRef.current[index] = el }}
-                        className="border border-yellow-500 px-2 py-1 rounded-xl text-sm font-light tracking-wider text-gray-700 dark:text-gray-200 cursor-pointer">
+                        className="border border-yellow-500 px-2 md:px-4 md:py-1 rounded-xl text-xs sm:text-lg font-light tracking-wider text-gray-700 dark:text-gray-200 cursor-pointer">
                         {text}
                     </motion.button>
                 ))}

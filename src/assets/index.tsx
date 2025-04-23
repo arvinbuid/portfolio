@@ -1,4 +1,4 @@
-import { RiBriefcaseLine, RiBroadcastLine, RiCopyrightLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiMoonFoggyFill, RiProjectorLine, RiSunFoggyFill, RiUserLine } from "@remixicon/react";
+import { RiBriefcaseLine, RiCopyrightLine, RiEyeLine, RiGithubLine, RiHistoryLine, RiHome5Line, RiMoonFoggyFill, RiProjectorLine, RiSunFoggyFill, RiUserLine } from "@remixicon/react";
 
 export const heroIcons = [
   <RiGithubLine key='github-icon' />,
@@ -84,6 +84,23 @@ export const skillsData = [
 ];
 
 export const projectsData = [
+
+  {
+    name: 'Dapper Fit',
+    desc: 'A modern Ecommerce platform built with Next.js, Typescript, Prisma and ShadCN where a user can order and pay clothes online. A user can sign up/login and admin can manage order and products.',
+    url: '/projects/dapper-fit.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'ReactJS', 'NextJS', 'PostgreSQL'],
+    githubLink: 'https://github.com/arvinbuid/dapper-fit',
+    livePreview: "https://dapper-fit-main.vercel.app/"
+  },
+  {
+    name: 'PrimeCare',
+    desc: 'An interactive healthcare appointment management system where the patients set an appointment with a doctor, and the doctor can manage their appointments. SMS notifications, admin passkey to manage appointments, and real-time tracking and monitoring with Sentry.',
+    url: '/projects/primecare.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'ReactJS', 'NextJS'],
+    githubLink: 'https://github.com/arvinbuid/primecare',
+    livePreview: "https://primecare-kappa.vercel.app/"
+  },
   {
     name: 'The Wild Oasis',
     desc: 'An internal web application where the employees of the fictional Wild Oasis company can manage bookings, check-ins & check-outs of a guests, cabins and many more..',
@@ -93,20 +110,12 @@ export const projectsData = [
     livePreview: "https://the-wild-oasis-personal-me.netlify.app/login"
   },
   {
-    name: 'Dapper Fit',
-    desc: 'A modern Ecommerce platform built with Next.js, Typescript, Prisma and ShadCN where a user can order and pay clothes online. A user can sign up/login and admin can manage order and products.',
-    url: '/projects/dapper-fit.png',
-    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS', 'PostgreSQL'],
-    githubLink: 'https://github.com/arvinbuid/dapper-fit',
-    livePreview: "https://dapper-fit-main.vercel.app/"
-  },
-  {
-    name: 'Synapse',
-    desc: 'Fullstack social media web application made with NextJS 15 & modern web technologies. Users can post, comment like, received real time notifications and follow other users. Responsive to all devices with toggle dark mode functionality.',
-    url: '/projects/synapse.png',
-    tech: ['HTML', 'CSS', 'Typescript', 'React', 'NextJS', 'PostgreSQL'],
-    githubLink: 'https://github.com/arvinbuid/synapse',
-    livePreview: "https://synapse-six-sand.vercel.app/"
+    name: 'Workhive',
+    desc: 'Job listing application to search and apply jobs online. Employers can also register an account to post a job listing in the syste and job seekers can apply for jobs.',
+    url: '/projects/workhive.png',
+    tech: ['HTML', 'CSS', 'PHP', 'Laravel', 'MySQL'],
+    githubLink: 'https://github.com/arvinbuid/workhive',
+    livePreview: "#"
   },
   {
     name: 'HirePulse',
@@ -117,12 +126,12 @@ export const projectsData = [
     livePreview: "https://hirepulse.onrender.com"
   },
   {
-    name: 'Workhive',
-    desc: 'Job listing application to search and apply jobs online. Employers can also register an account to post a job listing in the syste and job seekers can apply for jobs.',
-    url: '/projects/workhive.png',
-    tech: ['HTML', 'CSS', 'PHP', 'Laravel', 'MySQL'],
-    githubLink: 'https://github.com/arvinbuid/workhive',
-    livePreview: "#"
+    name: 'Synapse',
+    desc: 'Fullstack social media web application made with NextJS 15 & modern web technologies. Users can post, comment like, received real time notifications and follow other users. Responsive to all devices with toggle dark mode functionality.',
+    url: '/projects/synapse.png',
+    tech: ['HTML', 'CSS', 'Typescript', 'ReactJS', 'NextJS', 'PostgreSQL'],
+    githubLink: 'https://github.com/arvinbuid/synapse',
+    livePreview: "https://synapse-six-sand.vercel.app/"
   },
 ]
 
@@ -137,14 +146,14 @@ export const projectsButton = [
   'NodeJS',
   'PHP',
   'Laravel',
-  'PostgreSQL',
   'MySQL',
+  'PostgreSQL',
   'MongoDB'
 ]
 
 export const projectIcons = [
   <RiGithubLine key='github-icon' />,
-  <RiBroadcastLine key='live-icon' />
+  <RiEyeLine key='live-icon' />
 ]
 
 export const copyRightIcon = <RiCopyrightLine />
