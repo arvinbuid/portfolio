@@ -91,7 +91,7 @@ export const projectsData = [
     url: '/projects/dapper-fit.png',
     tech: ['HTML', 'CSS', 'Typescript', 'ReactJS', 'NextJS', 'PostgreSQL'],
     githubLink: 'https://github.com/arvinbuid/dapper-fit',
-    livePreview: "https://dapper-fit-main.vercel.app/"
+    livePreview: "https://dapper-fit.vercel.app/"
   },
   {
     name: 'PrimeCare',
