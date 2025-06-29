@@ -27,11 +27,6 @@ const Description = () => {
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
                     The passion for web development and coding is what drives me to pursue my passion.
                 </motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
-                    <div className={styles.button}>
-                        <p>About Me</p>
-                    </div>
-                </div>
             </div>
         </div>
     );

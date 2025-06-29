@@ -7,7 +7,12 @@ import Projects from '../../components/Projects';
 import Modal from '../../components/modal';
 import styles from './page.module.css'
 
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+
+interface ModalState {
+  active: boolean;
+  index: number;
+}
 
 const projects = [
   {
@@ -33,7 +38,24 @@ const projects = [
 ]
 
 export default function Home() {
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  const [modal, setModal] = useState<ModalState>({ active: false, index: 0 });
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+  useEffect(() => {
+    const checkScreenWidth = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+    checkScreenWidth(); // Set initial screen width
+    window.addEventListener('resize', checkScreenWidth);
+    return () => window.removeEventListener('resize', checkScreenWidth);
+  }, [])
+
+  // Update setModal to prevent activation on small screens
+  const handleSetModal: Dispatch<SetStateAction<ModalState>> = (value) => {
+    if (isLargeScreen) {
+      setModal(value);
+    }
+  };
 
   return (
     <>
@@ -46,11 +68,11 @@ export default function Home() {
         <div className={styles.body}>
           {
             projects.map((project, index) => (
-              <Projects key={index} index={index} title={project.title} setModal={setModal} />
+              <Projects key={index} index={index} title={project.title} setModal={handleSetModal} />
             ))
           }
         </div>
-        <Modal modal={modal} projects={projects} />
+        {isLargeScreen && <Modal modal={modal} projects={projects} />}
       </main>
     </>
   )
