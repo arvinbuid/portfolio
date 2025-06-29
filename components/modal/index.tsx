@@ -19,7 +19,7 @@ const scaleAnimation = {
         y: "-50%",
         transition: {
             duration: 0.4,
-            ease: [0.76, 0, 0.24, 1],
+            ease: [0.76, 0, 0.24, 1] as [number, number, number, number],
         },
     },
     closed: {
@@ -28,7 +28,7 @@ const scaleAnimation = {
         y: "-50%",
         transition: {
             duration: 0.4,
-            ease: [0.32, 0, 0.67, 0],
+            ease: [0.32, 0, 0.67, 0] as [number, number, number, number],
         }
     }
 }
