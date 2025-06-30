@@ -1,5 +1,6 @@
 'use client'
 
+import Contact from '../../components/Contact';
 import Description from '../../components/Description';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
@@ -75,6 +76,7 @@ export default function Home() {
         {isLargeScreen && <Modal modal={modal} projects={projects} />}
       </main>
       <SlidingImages />
+      <Contact />
     </>
   )
 }
