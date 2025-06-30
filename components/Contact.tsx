@@ -41,14 +41,14 @@ const Contact = () => {
                         <p>+639 210 682 950</p>
                     </div>
                     <div className={styles.button}>
-                        <p>Download Resume</p>
+                        <p><a href="/work-resume.pdf" download=''>Download Resume</a></p>
                     </div>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
                             <h3>VERSION</h3>
-                            <p>2025 © Edition</p>
+                            <p>2025 © Arvin Buid</p>
                         </span>
                         {/* <span>
                             <h3>LOCAL TIME</h3>
