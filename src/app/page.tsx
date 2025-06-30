@@ -4,6 +4,7 @@ import Description from '../../components/Description';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 import Projects from '../../components/Projects';
+import SlidingImages from '../../components/SlidingImages';
 import Modal from '../../components/modal';
 import styles from './page.module.css'
 
@@ -62,7 +63,6 @@ export default function Home() {
       <Header />
       <Hero />
       <Description />
-
       {/* Project */}
       <main className={styles.main}>
         <div className={styles.body}>
@@ -74,6 +74,7 @@ export default function Home() {
         </div>
         {isLargeScreen && <Modal modal={modal} projects={projects} />}
       </main>
+      <SlidingImages />
     </>
   )
 }

@@ -5,4 +5,5 @@
 
 html {
   background-color: #15171b;
+  overflow-x: hidden;
 }
