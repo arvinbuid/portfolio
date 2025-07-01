@@ -8,6 +8,11 @@
   z-index: 1;
   margin-bottom: 100vh;
 
+  @media (min-width: 1441px) {
+    width: 100vw;
+    overflow-x: clip;
+  }
+
   @media (max-width: 1440px) {
     width: 100vw;
     overflow-x: clip;
