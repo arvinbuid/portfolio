@@ -20,22 +20,26 @@ const projects = [
   {
     title: "Dapper Fit",
     src: "dapper-fit.png",
-    color: "#000000"
+    color: "#000000",
+    link: "https://dapper-fit.vercel.app/"
   },
   {
     title: "Workhive",
     src: "workhive.png",
-    color: "#8C8C8C"
+    color: "#8C8C8C",
+    link: "#"
   },
   {
     title: "PrimeCare",
     src: "primecare.png",
-    color: "#EFE8D3"
+    color: "#EFE8D3",
+    link: "https://primecare-kappa.vercel.app/"
   },
   {
     title: "Propery Hub",
     src: "property-hub.png",
-    color: "#706D63"
+    color: "#706D63",
+    link: "https://property-hub-dusky.vercel.app/"
   }
 ]
 
@@ -69,7 +73,7 @@ export default function Home() {
         <div className={styles.body}>
           {
             projects.map((project, index) => (
-              <Projects key={index} index={index} title={project.title} setModal={handleSetModal} />
+              <Projects key={index} index={index} title={project.title} link={project.link} setModal={handleSetModal} />
             ))
           }
         </div>

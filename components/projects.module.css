@@ -16,6 +16,11 @@
   align-items: center;
   padding: 50px 125px;
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
