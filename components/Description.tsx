@@ -25,7 +25,7 @@ const Description = () => {
                     }
                 </p>
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
-                    The passion for web development and coding is what drives me to pursue my passion.
+                    The passion for web development and coding is what drives me to pursue my goals.
                 </motion.p>
             </div>
         </div>
