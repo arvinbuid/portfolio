@@ -7,7 +7,15 @@
   border-top: 1px solid rgb(201, 201, 201);
   cursor: pointer;
   transition: all 0.2s;
-  max-width: 1300px;
+  max-width: calc(100% - 2.5%);
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    max-width: calc(100% - 7.5%);
+  }
+
+  @media (max-width: 768px) {
+    max-width: calc(100% - 10%);
+  }
 }
 
 .project div {
@@ -16,6 +24,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 50px 125px;
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    padding: 50px 70px;
+  }
 
   a {
     text-decoration: none;
