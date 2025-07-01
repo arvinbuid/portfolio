@@ -7,7 +7,7 @@
   background-color: #141516;
   position: relative;
 
-  @media (max-width: 764px) {
+  @media (max-width: 1440px) {
     max-width: max-content;
     overflow-x: clip;
   }
@@ -40,7 +40,15 @@
     max-width: 1800px;
     background-color: #141516;
 
-    @media (max-width: 764px) {
+    @media (min-width: 769px) and (max-width: 1440px) {
+      margin-top: -225px;
+      padding-left: 50px;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
       margin-top: -225px;
       padding-left: 25px;
       padding-right: 25px;
@@ -55,7 +63,12 @@
       margin-right: 200px;
       position: relative;
 
-      @media (max-width: 764px) {
+      @media (min-width: 769px) and (max-width: 1440px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media (max-width: 768px) {
         margin-left: 0;
         margin-right: 0;
       }
@@ -70,7 +83,11 @@
         margin: 0px;
         font-weight: 300;
 
-        @media (max-width: 764px) {
+        @media (min-width: 769px) and (max-width: 1440px) {
+          font-size: 7.5vw;
+        }
+
+        @media (max-width: 768px) {
           font-size: 9vw;
         }
       }
@@ -80,7 +97,12 @@
         left: calc(100% - 400px);
         top: calc(100% - 75px);
 
-        @media (max-width: 764px) {
+        @media (min-width: 769px) and (max-width: 1440px) {
+          left: calc(100% - 260px);
+          top: calc(100% - 78px);
+        }
+
+        @media (max-width: 768px) {
           left: calc(100% - 190px);
           top: calc(100% - 50px);
         }
@@ -98,7 +120,12 @@
           cursor: auto;
           padding: 0px;
 
-          @media (max-width: 764px) {
+          @media (min-width: 769px) and (max-width: 1440px) {
+            width: 150px;
+            height: 150px;
+          }
+
+          @media (max-width: 768px) {
             width: 100px;
             height: 100px;
           }
@@ -110,7 +137,11 @@
             z-index: 2;
             position: relative;
 
-            @media (max-width: 764px) {
+            @media (min-width: 769px) and (max-width: 1440px) {
+              font-size: 16px;
+            }
+
+            @media (max-width: 768px) {
               font-size: 12px;
             }
           }
@@ -132,7 +163,13 @@
       margin-left: 200px;
       margin-right: 200px;
 
-      @media (max-width: 764px) {
+      @media (min-width: 769px) and (max-width: 1440px) {
+        margin-top: 130px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      @media (max-width: 768px) {
         flex-direction: column;
         margin-top: 120px;
         margin-left: 0px;
@@ -140,9 +177,28 @@
       }
 
       .button {
-        @media (max-width: 764px) {
-          width: 280px;
-          padding: 12px 6px;
+        @media (min-width: 769px) and (max-width: 1440px) {
+          width: 250px;
+          padding: 18px 0;
+        }
+
+        @media (max-width: 768px) {
+          width: calc(100% - 25%);
+          padding: 18px 0;
+        }
+      }
+
+      a,
+      p {
+        @media (min-width: 769px) and (max-width: 1440px) {
+          font-size: 14px;
+        }
+      }
+
+      a,
+      p {
+        @media (max-width: 768px) {
+          font-size: 14px;
         }
       }
     }
@@ -153,7 +209,16 @@
       margin-top: 200px;
       padding: 20px;
 
-      @media (max-width: 764px) {
+      @media (min-width: 769px) and (max-width: 1440px) {
+        justify-content: space-between;
+        overflow-x: clip;
+        gap: 30px;
+        align-items: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
         justify-content: space-between;
         overflow-x: clip;
         gap: 30px;
@@ -173,7 +238,14 @@
         align-items: flex-end;
 
         p {
-          @media (max-width: 764px) {
+          @media (min-width: 769px) and (max-width: 1440px) {
+            font-size: 13px;
+            white-space: preserve nowrap;
+          }
+        }
+
+        p {
+          @media (max-width: 768px) {
             font-size: 12px;
             white-space: preserve nowrap;
           }
@@ -218,7 +290,7 @@
           font-weight: 700;
           font-size: 12px;
 
-          @media (max-width: 764px) {
+          @media (max-width: 768px) {
             font-size: 10px;
           }
         }
