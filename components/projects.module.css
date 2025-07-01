@@ -7,10 +7,7 @@
   border-top: 1px solid rgb(201, 201, 201);
   cursor: pointer;
   transition: all 0.2s;
-
-  /* @media (max-width: 768px) {
-    max-width: max-content;
-  } */
+  max-width: 1300px;
 }
 
 .project div {
