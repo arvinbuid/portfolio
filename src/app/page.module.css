@@ -1,7 +1,7 @@
 .main {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   color: white;
   margin-top: 12rem;
 
