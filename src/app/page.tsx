@@ -4,12 +4,14 @@ import Contact from '../../components/Contact';
 import Description from '../../components/Description';
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
+import Preloader from '../../components/preloader/Preloader';
 import Projects from '../../components/Projects';
 import SlidingImages from '../../components/SlidingImages';
 import Modal from '../../components/modal';
 import styles from './page.module.css'
 
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 interface ModalState {
   active: boolean;
@@ -46,7 +48,10 @@ const projects = [
 export default function Home() {
   const [modal, setModal] = useState<ModalState>({ active: false, index: 0 });
   const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [preloaderAnimationFinished, setPreloaderAnimationFinished] = useState(false);
 
+  // Effect to check screen width
   useEffect(() => {
     const checkScreenWidth = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
@@ -56,7 +61,34 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkScreenWidth);
   }, [])
 
-  // Update setModal to prevent activation on small screens
+  // Effect to set loading state to false after 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [])
+
+  // Effect to override cursor and scroll initial style from the globals.css
+  useEffect(() => {
+    if (!loading && preloaderAnimationFinished) {
+      document.body.style.cursor = 'default';
+      document.body.style.overflowY = 'scroll';
+      window.scrollTo(0, 0);
+    }
+  }, [loading, preloaderAnimationFinished])
+
+  // Effect to set cursor to none when modal is active
+  useEffect(() => {
+    if (loading || modal.active) {
+      document.body.style.cursor = modal.active ? 'none' : 'wait';
+    } else {
+      document.body.style.cursor = 'default';
+    }
+  }, [loading, modal]);
+
+  // Effect to update modal to prevent activation on small screens
   const handleSetModal: Dispatch<SetStateAction<ModalState>> = (value) => {
     if (isLargeScreen) {
       setModal(value);
@@ -65,6 +97,11 @@ export default function Home() {
 
   return (
     <>
+      <AnimatePresence mode='wait' onExitComplete={() => setPreloaderAnimationFinished(true)}>
+        {
+          loading && <Preloader />
+        }
+      </AnimatePresence>
       <Header />
       <Hero />
       <Description />
