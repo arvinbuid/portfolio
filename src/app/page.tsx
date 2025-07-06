@@ -65,6 +65,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
+      window.scrollTo(0, 0);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -75,7 +76,6 @@ export default function Home() {
     if (!loading && preloaderAnimationFinished) {
       document.body.style.cursor = 'default';
       document.body.style.overflowY = 'scroll';
-      window.scrollTo(0, 0);
     }
   }, [loading, preloaderAnimationFinished])
 

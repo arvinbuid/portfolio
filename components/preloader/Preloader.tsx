@@ -2,9 +2,10 @@
 
 import styles from './preloader.module.css'
 
-import { slideUp } from './animation';
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react';
+import { slideUp } from './animation';
+import { opacity } from './animation';
 
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
 
@@ -22,7 +23,7 @@ const Preloader = () => {
 
     return (
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
-            <p>{words[index]}</p>
+            <motion.p variants={opacity} initial="initial" animate="enter">{words[index]}</motion.p>
         </motion.div>
     );
 }
