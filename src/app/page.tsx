@@ -10,8 +10,9 @@ import SlidingImages from '../../components/SlidingImages';
 import Modal from '../../components/modal';
 import styles from './page.module.css'
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import Lenis from 'lenis';
 
 interface ModalState {
   active: boolean;
@@ -50,6 +51,7 @@ export default function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(true);
   const [loading, setLoading] = useState(true);
   const [preloaderAnimationFinished, setPreloaderAnimationFinished] = useState(false);
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Effect to check screen width
   useEffect(() => {
@@ -65,17 +67,45 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      window.scrollTo(0, 0);
     }, 2000);
 
     return () => clearTimeout(timer);
   }, [])
 
-  // Effect to override cursor and scroll initial style from the globals.css
+  // Effect to initialiaze lenis smoothscroll
   useEffect(() => {
-    if (!loading && preloaderAnimationFinished) {
-      document.body.style.cursor = 'default';
-      document.body.style.overflowY = 'scroll';
+    const lenis = new Lenis();
+    lenisRef.current = lenis;
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+      lenisRef.current = null;
+    }
+  }, [])
+
+  // Effect to enable/disable scroll y when loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflowY = 'hidden';
+      document.body.style.cursor = 'wait';
+      if (lenisRef.current) {
+        lenisRef.current.stop();
+      }
+    } else {
+      if (preloaderAnimationFinished) {
+        document.body.style.overflowY = 'scroll';
+        document.body.style.cursor = 'default';
+        if (lenisRef.current) {
+          lenisRef.current.start();
+        }
+      }
     }
   }, [loading, preloaderAnimationFinished])
 
@@ -97,7 +127,14 @@ export default function Home() {
 
   return (
     <>
-      <AnimatePresence mode='wait' onExitComplete={() => setPreloaderAnimationFinished(true)}>
+      <AnimatePresence mode='wait' onExitComplete={() => {
+        setPreloaderAnimationFinished(true);
+        if (lenisRef.current) {
+          lenisRef.current.scrollTo(0, { duration: 0 })
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }}>
         {
           loading && <Preloader />
         }
